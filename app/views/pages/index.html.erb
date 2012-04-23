@@ -1,0 +1,55 @@
+<center>
+  <div class="allConainer">
+    <div class="body">
+      <div class="header"> <a href="#" class="logo"><img src="/assets/Logo.png" width="502" height="101" alt="Hobnint" /></a> </div>
+      <div class="bodycontainer">
+        <div class="descriptiontxt">
+          <h1 class="aplaceforstudent">&nbsp;</h1>
+          <ul>
+            <li>Unable to find a suitable instructor for your guitar lessons or a tutor for your favorite Science subject?</li>
+            <li>As a tutor, do you have limited reach to students?</li>
+          </ul>
+          <div>If yes, then we are building something useful for you. Share your details and be the first ones to try our service </div>
+        </div>
+        
+        <%= form_tag(:controller => "pages", :action => "create", :method => "post", :remote => true) do %>
+        <div class="formContainer">
+          <ul>
+            <li>
+              <table width="398" class="selectiontable">
+                <tr>
+                  <td width="18"><input name="RegisteringAs" type="radio" value="STUDENT" checked="true"/></td>
+                  <td width="115">I am a Student</td>
+                  <td width="10">&nbsp;</td>
+                  <td width="16"><input name="RegisteringAs" type="radio" value="TUTOR" /></td>
+                  <td width="152">I am a Tutor</td>
+                </tr>
+              </table>
+            </li>
+            <li>
+              <input name="" class="inputbox" type="text" value="Email" />
+            </li>
+            <li>
+              <input name=""  class="inputbox" type="text" value="City" />
+            </li>
+            <li>
+              <select name="select" id="select"  class="inputbox">
+                <option>Interest</option>
+              </select>
+            </li>
+            <li>
+              <center>
+                  <%= submit_tag("", :class => "submitbtn") %>
+                 <!--<input name="" class="submitbtn" type="button" /> -->
+              </center>
+            </li>
+          </ul>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="launchingsoon"></div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</center>

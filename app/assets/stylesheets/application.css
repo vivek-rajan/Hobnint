@@ -5,3 +5,151 @@
  *= require_self
  *= require_tree . 
 */
+@charset "utf-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.descriptiontxt {
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: normal;
+	color: #333;
+	text-decoration: none;
+	background-image: url(background.png);
+	background-position: center top;
+	background-color: #FFF;
+	background-repeat: repeat-x;
+}
+.allConainer {
+	clear: both;
+	width: 100%;
+	background-image: url(ShiningBackground.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.footer {
+	background-image: url(footerBackground.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+	height: 177px;
+}
+.body {
+	margin:0 auto;
+	padding: 0 auto;
+	width: 980px;
+}
+.aplaceforstudent {
+	background-image: url("AplaceforStudent.png");
+	background-repeat: no-repeat;
+	clear: both;
+	height: 85px;
+	width: 100%;
+}
+.descriptiontxt {
+	float: left;
+	width: 48%;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #6b6a6a;
+	text-decoration: none;
+	text-align:left;
+}
+.bodycontainer {
+	clear: both;
+	height: 270px;
+}
+.submitbtn {
+	background-image: url("keepmeInformed.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 47px;
+	width: 224px;
+	cursor:pointer;
+}
+.submitbtn:hover {
+	opacity: 0.9;
+}
+.descriptiontxt ul li {
+	background-image: url("listIcon.png");
+	background-position: left top;
+	background-repeat: no-repeat;
+	margin: 0 0 20px;
+	padding: 0 0 0 25px;
+}
+.selectiontable {
+	border:0;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight:bold;
+}
+.header {
+	padding: 34px 0 65px;
+}
+* {
+	margin:0;
+	padding:0;
+}
+.formContainer {
+	background-color: #69A4D0;
+	border: 1px solid #37739F;
+	border-radius: 3px 3px 3px 3px;
+	float: right;
+	padding: 5px 20px;
+	text-align: left;
+	width: 400px;
+}
+.formContainer ul li {
+	margin: 7px 0;
+}
+.inputbox {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #4485B5;
+	border-radius: 3px 3px 3px 3px;
+	color: #555555;
+	padding: 9px 5px;
+	width: 97%;
+}
+select.inputbox {
+	width: 100%;
+}
+.launchingsoon{
+	background-image: url(launchingSoon.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	clear:both;
+	height: 79px;
+}
