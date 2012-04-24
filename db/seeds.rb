@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+['Subjects', 'Sports', 'Computer & Software', 'Music Theatre & Dance', 'Arts & Handicrafts', 'Health & Fitness',
+'Cooking & Nutrition', 'Makeup & Grooming', 'Foreign Languages', 'Matrial Arts', 'Others'].each do |interest|
+  Interest.create(:title => interest)
+end

@@ -1,9 +1,6 @@
 Hobnint::Application.routes.draw do
-  get "pages/index"
-
-  match "home" => "pages#index"
-  match "create" => "pages#create"
-
+  resources :pages, :only => :index
+  resources :users, :only => :create
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

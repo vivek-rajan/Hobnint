@@ -5,5 +5,19 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+  $("#select")
+   .multiselect({
+      noneSelectedText: 'Select Interest',
+      selectedList: 4
+   })
+   .multiselectfilter();
+});
+
+//$(document).ready(function(){
+//   $("#select").multiselect();
+//});

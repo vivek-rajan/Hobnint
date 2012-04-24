@@ -123,7 +123,26 @@ body {
 	margin:0;
 	padding:0;
 }
+.thanks {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+.button {
+  width:224px;
+  margin:0 auto;
+  height:47px;
+  border-radius:6px;
+  cursor: pointer;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  background: url("keepmeInformed.png");
+}
 .formContainer {
+        min-height:198px;
+        text-align: center;
 	background-color: #69A4D0;
 	border: 1px solid #37739F;
 	border-radius: 3px 3px 3px 3px;

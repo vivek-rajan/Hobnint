@@ -1,0 +1,15 @@
+<% if @user.errors.any? %>
+	<% @user.errors.messages.each do |key, val| %>
+		$("#<%= key %>_error").html("<%= key.to_s.capitalize + ' ' + val.to_sentence %>");
+	<% end %>
+<% else %>
+    $(".formContainer").flip({
+      direction:'rl',
+      content:'<div class="thanks">Thanks for Showing Interest.</div><div class="button" onClick="RevertFlip();">&nbsp;</div>',
+      color: '#69A4D0'
+    })
+<% end %>
+
+function RevertFlip(){
+  $(".formContainer").revertFlip();
+}

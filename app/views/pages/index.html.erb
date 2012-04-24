@@ -12,35 +12,35 @@
           <div>If yes, then we are building something useful for you. Share your details and be the first ones to try our service </div>
         </div>
         
-        <%= form_tag(:controller => "pages", :action => "create", :method => "post", :remote => true) do %>
+        <%= form_for @user, :remote => true do |f| %>
         <div class="formContainer">
           <ul>
             <li>
               <table width="398" class="selectiontable">
                 <tr>
-                  <td width="18"><input name="RegisteringAs" type="radio" value="STUDENT" checked="true"/></td>
+		  <td width='18'><%= f.radio_button :registration_type, User::RegistrationType[:student], :checked => true %></td>
                   <td width="115">I am a Student</td>
                   <td width="10">&nbsp;</td>
-                  <td width="16"><input name="RegisteringAs" type="radio" value="TUTOR" /></td>
+                  <td width="16"><%= f.radio_button :registration_type, User::RegistrationType[:tutor], :checked => false %></td>
                   <td width="152">I am a Tutor</td>
                 </tr>
               </table>
             </li>
             <li>
-              <input name="" class="inputbox" type="text" value="Email" />
+							<%= f.text_field :email, :class => 'inputbox' %>
+							<span id='email_error'></span>
             </li>
             <li>
-              <input name=""  class="inputbox" type="text" value="City" />
+							<%= f.text_field :city, :class => 'inputbox' %>
+							<span id='city_error'></span>
             </li>
             <li>
-              <select name="select" id="select"  class="inputbox">
-                <option>Interest</option>
-              </select>
+		<%= select_tag 'user[interest_ids][]', options_for_select(Interest.all.collect{|i| [i.title, i.id]}), {:id => 'select', :class => 'inputbox', :multiple => "multiple"} %>
             </li>
             <li>
               <center>
-                  <%= submit_tag("", :class => "submitbtn") %>
-                 <!--<input name="" class="submitbtn" type="button" /> -->
+              	<%= f.submit "", :class => "submitbtn" %>
+                <!--<input name="" class="submitbtn" type="button" /> -->
               </center>
             </li>
           </ul>
