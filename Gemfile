@@ -19,6 +19,9 @@ end
 gem 'jquery-rails'
 
 gem 'pg'
+gem 'heroku'
+gem 'thin'
+gem 'taps'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
