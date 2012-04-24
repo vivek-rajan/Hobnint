@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+
+  attr_accessor :other_interests
   
   RegistrationType = {:student => 0, :tutor => 1}
   
@@ -8,5 +10,22 @@ class User < ActiveRecord::Base
   validates :email, :city, :presence => true
   validates :email, :uniqueness => {:allow_blank => true},
                     :format => {:with => RegExp[:email], :allow_blank => true}
-  
+  after_create :add_other_interests
+
+  private
+
+  def add_other_interests
+    if other_interests
+      interests_arr = other_interests.split(',').each{|a| a.strip!}
+      interests_arr.each do |i|
+        interest = Interest.find(:first, :conditions => ["lower(title) = ?", i.downcase])
+        if interest
+          self.interests << interest
+        else
+          self.interests.create(:title => i, :is_custom => true)
+        end
+      end
+    end
+  end
+
 end

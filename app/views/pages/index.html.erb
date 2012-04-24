@@ -37,7 +37,8 @@
 		<span id='city_error'></span>
             </li>
             <li>
-		<%= select_tag 'user[interest_ids][]', options_for_select(Interest.all.collect{|i| [i.title, i.id]}), {:id => 'select', :class => 'inputbox', :multiple => "multiple"} %>
+		<%= select_tag 'user[interest_ids][]', options_for_select(Interest.default.collect{|i| [i.title, i.id]}), {:id => 'select', :class => 'inputbox', :multiple => "multiple"} %>
+                <%= f.text_field :other_interests, :class => 'inputbox' %>
             </li>
             <li>
               <center>

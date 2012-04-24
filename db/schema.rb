@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120423164233) do
+ActiveRecord::Schema.define(:version => 20120424184911) do
 
   create_table "interests", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_custom",  :default => false
   end
 
   create_table "interests_users", :force => true do |t|
