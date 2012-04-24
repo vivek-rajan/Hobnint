@@ -27,19 +27,21 @@
               </table>
             </li>
             <li>
-							<%= f.text_field :email, :class => 'inputbox' %>
-							<span id='email_error'></span>
+		<%= f.text_field :email, :class => 'inputbox', :value => 'Email', :onfocus => "clickclear(this, 'Email')",
+                                                               :onblur => "clickrecall(this,'Email')" %>
+		<span id='email_error'></span>
             </li>
             <li>
-							<%= f.text_field :city, :class => 'inputbox' %>
-							<span id='city_error'></span>
+		<%= f.text_field :city, :class => 'inputbox', :value => 'City', :onfocus => "clickclear(this, 'City')",
+                                                               :onblur => "clickrecall(this,'City')" %>
+		<span id='city_error'></span>
             </li>
             <li>
 		<%= select_tag 'user[interest_ids][]', options_for_select(Interest.all.collect{|i| [i.title, i.id]}), {:id => 'select', :class => 'inputbox', :multiple => "multiple"} %>
             </li>
             <li>
               <center>
-              	<%= f.submit "", :class => "submitbtn" %>
+              	<%= f.submit "", :id => "btnKeepMeInformed", :class => "submitbtn" %>
                 <!--<input name="" class="submitbtn" type="button" /> -->
               </center>
             </li>

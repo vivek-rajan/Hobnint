@@ -16,8 +16,30 @@ $(function(){
       selectedList: 4
    })
    .multiselectfilter();
+   
+   $("#btnKeepMeInformed").click(function() {
+     if(("#user_email").val().toLowerCase() == "email")
+       ("#user_email").val("");
+
+     if(("#user_city").val().toLowerCase() == "city")
+        ("#user_city").val("");
+
+      return true;
+   });
+
 });
 
 //$(document).ready(function(){
 //   $("#select").multiselect();
 //});
+
+function clickclear(thisfield, defaulttext) {
+  if (thisfield.value == defaulttext) {
+  thisfield.value = "";
+  }
+}
+function clickrecall(thisfield, defaulttext) {
+  if (thisfield.value == "") {
+  thisfield.value = defaulttext;
+  }
+}
