@@ -153,6 +153,8 @@ body {
 }
 .formContainer ul li {
 	margin: 7px 0;
+        width:400px;
+        display:block;
 }
 .inputbox {
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -160,10 +162,10 @@ body {
 	border-radius: 3px 3px 3px 3px;
 	color: #555555;
 	padding: 9px 5px;
-	width: 97%;
+	width: 400px;
 }
 select.inputbox {
-	width: 100%;
+  width: 410px;
 }
 .launchingsoon{
 	background-image: url(launchingSoon.png);
