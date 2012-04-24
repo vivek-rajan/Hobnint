@@ -125,9 +125,11 @@ body {
 }
 .thanks {
     color: white;
-    font-size: 16px;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 80px;
     text-align: center;
 }
 .button {
