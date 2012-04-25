@@ -39,6 +39,7 @@
             <li>
 		<%= select_tag 'user[interest_ids][]', options_for_select(Interest.default.collect{|i| [i.title, i.id]}), {:id => 'select', :class => 'inputbox', :multiple => "multiple"} %>
             </li>
+              <%= f.hidden_field :other_interests %>
             <li>
               <center>
               	<%= f.submit "", :id => "btnKeepMeInformed", :class => "submitbtn" %>

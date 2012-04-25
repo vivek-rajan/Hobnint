@@ -18,10 +18,10 @@ $(function(){
   .multiselectfilter();
 
   var othersElement = $("ul.ui-multiselect-checkboxes > li input[title='Others']");
-  othersElement.next().remove();
+  othersElement.next().hide();
 
   //append at li level
-  othersElement.parent().parent().append('<input id="user_other_interests" class="inputboxInDropdown" value="Others,..." onfocus = "clickclear(this, \'Others,...\')", onblur = "clickrecall(this,\'Others,...\')" type="text" size="30" name="user[other_interests]" ></input>');
+  othersElement.parent().parent().append('<input class="inputboxInDropdown" value="Others,..." onfocus = "clickclear(this, \'Others,...\')", onblur = "SetCustomInterest(this,\'Others,...\')" type="text" size="30" name="user[other_interests]" ></input>');
    
    $("#btnKeepMeInformed").click(function() {
      if($("#user_email").val().toLowerCase() == "email")
@@ -50,6 +50,20 @@ function clickclear(thisfield, defaulttext) {
 function clickrecall(thisfield, defaulttext) {
   if (thisfield.value == "") {
   thisfield.value = defaulttext;
+  }
+}
+
+function SetCustomInterest(thisfield, defaulttext) {
+  if (thisfield.value == "") {
+    thisfield.value = defaulttext;
+  }else{
+    var othersElement = $("ul.ui-multiselect-checkboxes > li input[title='Others']");
+    othersElement.next().text(thisfield.value);//Setting span value
+    $("#user_other_interests").val(thisfield.value);
+//    othersElement.prop("checked", false);
+//    othersElement.prop("checked", true);
+      othersElement.removeAttr('checked');
+      othersElement.click();
   }
 }
 
