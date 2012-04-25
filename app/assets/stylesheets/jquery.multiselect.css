@@ -1,4 +1,6 @@
 .ui-multiselect { padding:9px 0 9px 4px; text-align:left; color:#555; font-size: 14px; font-weight: normal; }
+.ui-multiselect span {display:block;overflow: hidden; text-overflow:ellipsis;white-space: nowrap;width: 370px;}
+.ui-multiselect span.ui-icon-triangle-2-n-s {width:15px;}
 .ui-multiselect.ui-state-active { color: #1C94C4;}
 .ui-multiselect span.ui-icon { float:right; margin-top:4px; height:10px; }
 .ui-multiselect-single .ui-multiselect-checkboxes input { position:absolute !important; top: auto !important; left:-9999px; }

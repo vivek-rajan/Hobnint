@@ -1,4 +1,6 @@
 <% if @user.errors.any? %>
+        $("#email_error").html('');
+        $("#city_error").html('');
 	<% @user.errors.messages.each do |key, val| %>
 		$("#<%= key %>_error").html("<%= key.to_s.capitalize + ' ' + val.to_sentence %>");
 	<% end %>
