@@ -11,18 +11,27 @@
 
 $(function(){
   $("#select")
-   .multiselect({
-      noneSelectedText: 'Select Interest',
-      selectedList: 4
-   })
-   .multiselectfilter();
+  .multiselect({
+    noneSelectedText: 'Your interests',
+    selectedList: 4
+  })
+  .multiselectfilter();
+
+  var othersElement = $("ul.ui-multiselect-checkboxes > li input[title='Others']");
+  othersElement.next().remove();
+
+  //append at li level
+  othersElement.parent().parent().append('<input id="user_other_interests" class="inputboxInDropdown" value="Others,..." onfocus = "clickclear(this, \'Others,...\')", onblur = "clickrecall(this,\'Others,...\')" type="text" size="30" name="user[other_interests]" ></input>');
    
    $("#btnKeepMeInformed").click(function() {
-     if(("#user_email").val().toLowerCase() == "email")
-       ("#user_email").val("");
+     if($("#user_email").val().toLowerCase() == "email")
+       $("#user_email").val("");
 
-     if(("#user_city").val().toLowerCase() == "city")
-        ("#user_city").val("");
+     if($("#user_city").val().toLowerCase() == "city")
+        $("#user_city").val("");
+
+     if($("#user_other_interests").val().toLowerCase() == "others,...")
+        $("#user_other_interests").val("");
 
       return true;
    });
@@ -42,4 +51,8 @@ function clickrecall(thisfield, defaulttext) {
   if (thisfield.value == "") {
   thisfield.value = defaulttext;
   }
+}
+
+function SetDropdownTitleChange(title){
+  $(".ui-multiselect.ui-widget.ui-state-default.ui-corner-all>span").last().text(title);
 }

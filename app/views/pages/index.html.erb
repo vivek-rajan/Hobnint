@@ -18,27 +18,26 @@
             <li>
               <table width="398" class="selectiontable">
                 <tr>
-		  <td width='18'><%= f.radio_button :registration_type, User::RegistrationType[:student], :checked => true %></td>
+		  <td width='18'><%= f.radio_button :registration_type, User::RegistrationType[:student], :checked => true, :onClick => "SetDropdownTitleChange('Your interests');" %></td>
                   <td width="115">I am a Student</td>
                   <td width="10">&nbsp;</td>
-                  <td width="16"><%= f.radio_button :registration_type, User::RegistrationType[:tutor], :checked => false %></td>
+                  <td width="16"><%= f.radio_button :registration_type, User::RegistrationType[:tutor], :checked => false, :onClick => "SetDropdownTitleChange('Your expertise');" %></td>
                   <td width="152">I am a Tutor</td>
                 </tr>
               </table>
             </li>
             <li>
-		<%= f.text_field :email, :class => 'inputbox', :value => 'Email', :onfocus => "clickclear(this, 'Email')",
-                                                               :onblur => "clickrecall(this,'Email')" %>
-		<span id='email_error'></span>
+		<%= f.text_field :email, :class => 'inputbox', :value => 'Your email', :onfocus => "clickclear(this, 'Your email')",
+                                                               :onblur => "clickrecall(this,'Your email')" %>
+		<span class="error" id='email_error'></span>
             </li>
             <li>
-		<%= f.text_field :city, :class => 'inputbox', :value => 'City', :onfocus => "clickclear(this, 'City')",
-                                                               :onblur => "clickrecall(this,'City')" %>
-		<span id='city_error'></span>
+		<%= f.text_field :city, :class => 'inputbox', :value => 'Your city', :onfocus => "clickclear(this, 'Your city')",
+                                                               :onblur => "clickrecall(this,'Your city')" %>
+		<span class="error" id='city_error'></span>
             </li>
             <li>
 		<%= select_tag 'user[interest_ids][]', options_for_select(Interest.default.collect{|i| [i.title, i.id]}), {:id => 'select', :class => 'inputbox', :multiple => "multiple"} %>
-                <%= f.text_field :other_interests, :class => 'inputbox' %>
             </li>
             <li>
               <center>
