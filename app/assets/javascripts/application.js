@@ -24,10 +24,10 @@ $(function(){
   othersElement.parent().parent().append('<input class="inputboxInDropdown" value="Others,..." onfocus = "clickclear(this, \'Others,...\')", onblur = "SetCustomInterest(this,\'Others,...\')" type="text" size="30" name="user[other_interests]" ></input>');
    
    $("#btnKeepMeInformed").click(function() {
-     if($("#user_email").val().toLowerCase() == "email")
+     if($("#user_email").val().toLowerCase() == "your email")
        $("#user_email").val("");
 
-     if($("#user_city").val().toLowerCase() == "city")
+     if($("#user_city").val().toLowerCase() == "your city")
         $("#user_city").val("");
 
      if($("#user_other_interests").val().toLowerCase() == "others,...")
