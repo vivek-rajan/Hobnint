@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   def add_other_interests
     if other_interests
-      interest = Interest.find(:first, :conditions => ["lower(title) = ?", i.downcase])
+      interest = Interest.find(:first, :conditions => ["lower(title) = ?", other_interests.downcase])
       if interest
         self.interests << interest
       else
