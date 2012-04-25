@@ -161,10 +161,11 @@ body {
 .inputbox {
 	background: none repeat scroll 0 0 #FFFFFF;
 	border: 1px solid #4485B5;
-	border-radius: 3px 3px 3px 3px;
+	border-radius: 4px;
+        font-size:14px;
 	color: #555555;
 	padding: 9px 5px;
-	width: 400px;
+	width: 388px;
 }
 .inputboxInDropdown {
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -175,7 +176,7 @@ body {
 	width: 340px;
 }
 select.inputbox {
-  width: 410px;
+  width: 400px;
 }
 .launchingsoon{
 	background-image: url(launchingSoon.png);
